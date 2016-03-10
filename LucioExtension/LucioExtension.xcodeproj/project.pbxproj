@@ -12,6 +12,15 @@
 		C67CE9AC1C91556D002B7A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CE9AA1C91556D002B7A86 /* Main.storyboard */; };
 		C67CE9AE1C91556D002B7A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67CE9AD1C91556D002B7A86 /* Assets.xcassets */; };
 		C67CE9B11C91556D002B7A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CE9AF1C91556D002B7A86 /* LaunchScreen.storyboard */; };
+		C67CE9BA1C9156A2002B7A86 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */; };
+		C67CE9BE1C9157FD002B7A86 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9BD1C9157FD002B7A86 /* Array+Extension.swift */; };
+		C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */; };
+		C67CE9C21C91597B002B7A86 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */; };
+		C67CE9C41C915996002B7A86 /* CAMediaTimingFunction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */; };
+		C67CE9C71C915A0C002B7A86 /* CIColorInvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C61C915A0C002B7A86 /* CIColorInvert.swift */; };
+		C67CE9C91C915A3D002B7A86 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C81C915A3D002B7A86 /* Common.swift */; };
+		C67CE9CB1C915B9C002B7A86 /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */; };
+		C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		C67CE9AD1C91556D002B7A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C67CE9B01C91556D002B7A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C67CE9B21C91556D002B7A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C67CE9BD1C9157FD002B7A86 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+Extension.swift"; sourceTree = "<group>"; };
+		C67CE9C61C915A0C002B7A86 /* CIColorInvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColorInvert.swift; sourceTree = "<group>"; };
+		C67CE9C81C915A3D002B7A86 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
+		C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,8 @@
 		C67CE9A51C91556D002B7A86 /* LucioExtension */ = {
 			isa = PBXGroup;
 			children = (
+				C67CE9C51C915A02002B7A86 /* Utils */,
+				C67CE9B81C915683002B7A86 /* Extensions */,
 				C67CE9A61C91556D002B7A86 /* AppDelegate.swift */,
 				C67CE9A81C91556D002B7A86 /* ViewController.swift */,
 				C67CE9AA1C91556D002B7A86 /* Main.storyboard */,
@@ -62,6 +82,29 @@
 				C67CE9B21C91556D002B7A86 /* Info.plist */,
 			);
 			path = LucioExtension;
+			sourceTree = "<group>";
+		};
+		C67CE9B81C915683002B7A86 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */,
+				C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */,
+				C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */,
+				C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */,
+				C67CE9BD1C9157FD002B7A86 /* Array+Extension.swift */,
+				C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */,
+				C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C67CE9C51C915A02002B7A86 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C67CE9C61C915A0C002B7A86 /* CIColorInvert.swift */,
+				C67CE9C81C915A3D002B7A86 /* Common.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +178,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67CE9CB1C915B9C002B7A86 /* SwiftyUserDefaults.swift in Sources */,
+				C67CE9C21C91597B002B7A86 /* UIColor+Extension.swift in Sources */,
+				C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */,
+				C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */,
+				C67CE9C41C915996002B7A86 /* CAMediaTimingFunction+Extension.swift in Sources */,
+				C67CE9BA1C9156A2002B7A86 /* UIView+Extension.swift in Sources */,
+				C67CE9BE1C9157FD002B7A86 /* Array+Extension.swift in Sources */,
+				C67CE9C71C915A0C002B7A86 /* CIColorInvert.swift in Sources */,
 				C67CE9A91C91556D002B7A86 /* ViewController.swift in Sources */,
+				C67CE9C91C915A3D002B7A86 /* Common.swift in Sources */,
 				C67CE9A71C91556D002B7A86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
