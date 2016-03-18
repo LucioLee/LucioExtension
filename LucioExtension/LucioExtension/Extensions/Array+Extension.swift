@@ -8,6 +8,35 @@
 
 import Foundation
 
+public extension SequenceType {
+    @warn_unused_result
+    public func some(@noescape includeElement:(Self.Generator.Element) throws -> Bool) rethrows -> Bool {
+    
+        for element in self {
+            do {
+                if try includeElement(element) == true {return true}
+            } catch {
+                return try includeElement(element)
+            }
+        }
+        return false;
+    }
+    
+    @warn_unused_result
+    public func every(@noescape includeElement:(Self.Generator.Element) throws -> Bool) rethrows -> Bool {
+        
+        for element in self {
+            do {
+                if try includeElement(element) == false {return false}
+            } catch {
+                return try includeElement(element)
+            }
+        }
+        return true;
+    }
+}
+
+
 public extension Array {
     
     public subscript(index1 : Int,index2 : Int,restIndexs : Int...) -> [Element] {
