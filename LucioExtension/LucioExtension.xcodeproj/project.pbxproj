@@ -21,6 +21,8 @@
 		C67CE9C91C915A3D002B7A86 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C81C915A3D002B7A86 /* Common.swift */; };
 		C67CE9CB1C915B9C002B7A86 /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */; };
 		C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */; };
+		C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */; };
+		C6894D6F1CBE1C7B006CFDCD /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6E1CBE1C7B006CFDCD /* NSString+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		C67CE9C81C915A3D002B7A86 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		C6894D6E1CBE1C7B006CFDCD /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +96,10 @@
 				C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */,
 				C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */,
 				C67CE9BD1C9157FD002B7A86 /* Array+Extension.swift */,
+				C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */,
 				C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */,
 				C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */,
+				C6894D6E1CBE1C7B006CFDCD /* NSString+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,6 +188,8 @@
 				C67CE9C21C91597B002B7A86 /* UIColor+Extension.swift in Sources */,
 				C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */,
 				C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */,
+				C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */,
+				C6894D6F1CBE1C7B006CFDCD /* NSString+Extension.swift in Sources */,
 				C67CE9C41C915996002B7A86 /* CAMediaTimingFunction+Extension.swift in Sources */,
 				C67CE9BA1C9156A2002B7A86 /* UIView+Extension.swift in Sources */,
 				C67CE9BE1C9157FD002B7A86 /* Array+Extension.swift in Sources */,
@@ -336,6 +344,7 @@
 				C67CE9B71C91556D002B7A86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

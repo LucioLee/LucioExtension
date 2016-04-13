@@ -21,10 +21,14 @@ public extension UIColor {
         return UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
     
-    public class func colorWithRGBHex(hex:UInt32) -> UIColor {
-        let red = CGFloat((hex >> 16) & 0xFF) / 255
-        let green = CGFloat((hex >> 8) & 0xFF) / 255
-        let blue = CGFloat(hex & 0xFF) / 255
-        return UIColor(red: red, green: green, blue: blue, alpha: 1)
+    public convenience init(hexColor:UInt32) {
+        let red = CGFloat((hexColor >> 16) & 0xFF) / 255
+        let green = CGFloat((hexColor >> 8) & 0xFF) / 255
+        let blue = CGFloat(hexColor & 0xFF) / 255
+        self.init(red: red, green: green, blue: blue, alpha: 1)
+    }
+    
+    public class func colorWithRGBHex(hexColor:UInt32) -> UIColor {
+        return UIColor(hexColor: hexColor);
     }
 }
