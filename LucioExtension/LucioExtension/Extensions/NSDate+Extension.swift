@@ -58,7 +58,7 @@ public extension NSDate {
 
 public extension NSDate {
     
-    public class func dateFormString(dateString:String, withDateFormat dateFormat:String) -> NSDate? {
+    public class func fromString(dateString:String, withFormat dateFormat:String) -> NSDate? {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.dateFromString(dateString)
