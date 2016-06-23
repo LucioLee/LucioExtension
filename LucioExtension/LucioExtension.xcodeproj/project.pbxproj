@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C64DC1781D1A37E000CB1708 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DC1771D1A37E000CB1708 /* UIImage+Extension.swift */; };
+		C64DC17A1D1A38EA00CB1708 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DC1791D1A38EA00CB1708 /* UIViewController+Extension.swift */; };
 		C67CE9A71C91556D002B7A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9A61C91556D002B7A86 /* AppDelegate.swift */; };
 		C67CE9A91C91556D002B7A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9A81C91556D002B7A86 /* ViewController.swift */; };
 		C67CE9AC1C91556D002B7A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CE9AA1C91556D002B7A86 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C64DC1771D1A37E000CB1708 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		C64DC1791D1A38EA00CB1708 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C67CE9A31C91556D002B7A86 /* LucioExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LucioExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CE9A61C91556D002B7A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67CE9A81C91556D002B7A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +95,9 @@
 		C67CE9B81C915683002B7A86 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C64DC1771D1A37E000CB1708 /* UIImage+Extension.swift */,
 				C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */,
+				C64DC1791D1A38EA00CB1708 /* UIViewController+Extension.swift */,
 				C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */,
 				C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */,
 				C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */,
@@ -185,7 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67CE9CB1C915B9C002B7A86 /* SwiftyUserDefaults.swift in Sources */,
+				C64DC1781D1A37E000CB1708 /* UIImage+Extension.swift in Sources */,
 				C67CE9C21C91597B002B7A86 /* UIColor+Extension.swift in Sources */,
+				C64DC17A1D1A38EA00CB1708 /* UIViewController+Extension.swift in Sources */,
 				C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */,
 				C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */,
 				C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */,
