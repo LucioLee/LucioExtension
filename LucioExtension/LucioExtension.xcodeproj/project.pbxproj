@@ -30,6 +30,8 @@
 /* Begin PBXFileReference section */
 		C64DC1771D1A37E000CB1708 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		C64DC1791D1A38EA00CB1708 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C65334EC1D1BF42700C8DC09 /* 图片旋转.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "图片旋转.playground"; sourceTree = "<group>"; };
+		C65334ED1D1BF42700C8DC09 /* 生成二维码.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "生成二维码.playground"; sourceTree = "<group>"; };
 		C67CE9A31C91556D002B7A86 /* LucioExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LucioExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CE9A61C91556D002B7A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67CE9A81C91556D002B7A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C65334EB1D1BF42700C8DC09 /* 学习笔记 */ = {
+			isa = PBXGroup;
+			children = (
+				C65334EC1D1BF42700C8DC09 /* 图片旋转.playground */,
+				C65334ED1D1BF42700C8DC09 /* 生成二维码.playground */,
+			);
+			path = "学习笔记";
+			sourceTree = "<group>";
+		};
 		C67CE99A1C91556D002B7A86 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +91,7 @@
 		C67CE9A51C91556D002B7A86 /* LucioExtension */ = {
 			isa = PBXGroup;
 			children = (
+				C65334EB1D1BF42700C8DC09 /* 学习笔记 */,
 				C67CE9C51C915A02002B7A86 /* Utils */,
 				C67CE9B81C915683002B7A86 /* Extensions */,
 				C67CE9A61C91556D002B7A86 /* AppDelegate.swift */,
