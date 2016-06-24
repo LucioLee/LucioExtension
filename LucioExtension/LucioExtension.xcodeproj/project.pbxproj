@@ -28,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C647C2011D1D3F95008F7A4C /* 图片方向修正.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "图片方向修正.playground"; sourceTree = "<group>"; };
 		C64DC1771D1A37E000CB1708 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		C64DC1791D1A38EA00CB1708 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C65334EC1D1BF42700C8DC09 /* 图片旋转.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "图片旋转.playground"; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		C65334EB1D1BF42700C8DC09 /* 学习笔记 */ = {
 			isa = PBXGroup;
 			children = (
+				C647C2011D1D3F95008F7A4C /* 图片方向修正.playground */,
 				C65334EC1D1BF42700C8DC09 /* 图片旋转.playground */,
 				C65334ED1D1BF42700C8DC09 /* 生成二维码.playground */,
 			);

@@ -30,46 +30,37 @@ public extension UIImage {
         var transform: CGAffineTransform = CGAffineTransformIdentity
         
         switch imageOrientation {
-        case .Down, .DownMirrored:
-            transform = CGAffineTransformTranslate(transform, size.width, size.height)
-            transform = CGAffineTransformRotate(transform, CGFloat(M_PI))
-        case .Left, .LeftMirrored:
+        case .Left :
             transform = CGAffineTransformTranslate(transform, size.width, 0)
             transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
-        case .Right, .RightMirrored:
+        case .Down :
+            transform = CGAffineTransformTranslate(transform, size.width, size.height)
+            transform = CGAffineTransformRotate(transform, CGFloat(M_PI))
+        case .Right:
             transform = CGAffineTransformTranslate(transform, 0, size.height)
             transform = CGAffineTransformRotate(transform, CGFloat(-M_PI_2))
+        case .UpMirrored :
+            transform = CGAffineTransformTranslate(transform, size.width,0)
+            transform = CGAffineTransformScale(transform, -1, 1)
+        case .LeftMirrored:
+            transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
+            transform = CGAffineTransformTranslate(transform, size.height ,-size.width)
+            transform = CGAffineTransformScale(transform, -1, 1)
+        case .DownMirrored:
+            transform = CGAffineTransformTranslate(transform, 0,size.height)
+            transform = CGAffineTransformScale(transform, 1, -1)
+        case .RightMirrored:
+            transform = CGAffineTransformRotate(transform, CGFloat(M_PI_2))
+            transform = CGAffineTransformScale(transform, 1, -1)
         default:
             break
         }
-        
-        switch imageOrientation {
-        case .UpMirrored, .DownMirrored:
-            CGAffineTransformTranslate(transform, size.width, 0)
-            CGAffineTransformScale(transform, -1, 1)
-            break
-        case .LeftMirrored, .RightMirrored:
-            CGAffineTransformTranslate(transform, size.height, 0)
-            CGAffineTransformScale(transform, -1, 1)
-        default:
-            break
-        }
-        
-        let ctx = CGBitmapContextCreate(nil, Int(size.width), Int(size.height), CGImageGetBitsPerComponent(CGImage), 0, CGImageGetColorSpace(CGImage), CGImageAlphaInfo.PremultipliedLast.rawValue)!
-        
-        CGContextConcatCTM(ctx, transform)
-        
-        switch imageOrientation {
-        case .Left, .LeftMirrored, .Right, .RightMirrored:
-            CGContextDrawImage(ctx, CGRectMake(0, 0, size.height, size.width), CGImage)
-            break
-        default:
-            CGContextDrawImage(ctx, CGRectMake(0, 0, size.width, size.height), CGImage)
-            break
-        }
-        
-        let cgimg:CGImageRef = CGBitmapContextCreateImage(ctx)!
-        let img:UIImage = UIImage(CGImage: cgimg)
+        let drawSize = [.Left, .LeftMirrored, .Right, .RightMirrored].contains(imageOrientation) ? CGSize(width: size.height, height: size.width) : CGSize(width: size.width, height: size.height)
+        let context = CGBitmapContextCreate(nil, Int(size.width), Int(size.height), CGImageGetBitsPerComponent(CGImage), 0, CGImageGetColorSpace(CGImage), CGImageGetBitmapInfo(CGImage).rawValue)!
+        CGContextConcatCTM(context, transform)
+        CGContextDrawImage(context, CGRect(origin: CGPoint.zero, size:drawSize), CGImage)
+        let cgImg = CGBitmapContextCreateImage(context)!
+        let img:UIImage = UIImage(CGImage: cgImg)
         
         return img
     }
