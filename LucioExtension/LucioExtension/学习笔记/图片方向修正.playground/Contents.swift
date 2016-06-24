@@ -60,7 +60,7 @@ let right              = UIImage(CGImage: image.CGImage!, scale: image.scale, or
 let rightMirrored      = UIImage(CGImage: image.CGImage!, scale: image.scale, orientation: .RightMirrored)
 /*:
  - important:
-    修改图片方向属性*imageOrientation*并不会影响图片的物理方向，只会影响在设备中的显示方向。但是，Playground的*timeline*不会显示方向修改后的图片和方向，比如Size(700,1244)的图片,imageOrientation设置为Left,在设备上会左转90度，Size会变为(1244.0, 700.0)，在timeline中查看，显示的还是物理图片和物理尺寸。
+    修改图片方向属性*imageOrientation*并不会影响图片的物理方向，只会影响在设备中的显示方向。但是，Playground的*timeline*不会显示方向修改后的图片和方向，比如*Size(700,1244)*的图片,*imageOrientation*设置为Left,在设备上会左转90度，Size会变为*(1244.0, 700.0)*，在timeline中查看，显示的还是物理图片和物理尺寸。
  */
 let fiexedUp           = up.fixOrientation()
 let fixedUpMirrored    = upMirrored.fixOrientation()
