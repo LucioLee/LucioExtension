@@ -41,7 +41,7 @@ public extension UIImage {
         CGContextDrawImage(context, CGRect(origin: CGPoint.zero, size:drawSize), CGImage)
         let cgImg = CGBitmapContextCreateImage(context)!
         let img:UIImage = UIImage(CGImage: cgImg)
-        
+
         return img
     }
 }

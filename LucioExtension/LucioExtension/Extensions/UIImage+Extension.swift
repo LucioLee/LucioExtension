@@ -75,7 +75,7 @@ public extension UIImage {
         return img
     }
     
-    public func rotate(orientation: UIImageRotateOrientation) -> UIImage {
+    public func rotate(orientation orientation: UIImageRotateOrientation) -> UIImage {
         var transform = CGAffineTransformIdentity
         switch orientation {
         case .Mirrored :

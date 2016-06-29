@@ -49,8 +49,10 @@
 		C67CE9C81C915A3D002B7A86 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		C688F26B1D1E383F00FBDA72 /* 数组操作.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "数组操作.playground"; sourceTree = "<group>"; };
 		C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		C6894D6E1CBE1C7B006CFDCD /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
+		C69404B01D2422A700C3AD3B /* 绘制图表.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "绘制图表.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +69,11 @@
 		C65334EB1D1BF42700C8DC09 /* 学习笔记 */ = {
 			isa = PBXGroup;
 			children = (
+				C69404B01D2422A700C3AD3B /* 绘制图表.playground */,
 				C647C2011D1D3F95008F7A4C /* 图片方向修正.playground */,
 				C65334EC1D1BF42700C8DC09 /* 图片旋转.playground */,
 				C65334ED1D1BF42700C8DC09 /* 生成二维码.playground */,
+				C688F26B1D1E383F00FBDA72 /* 数组操作.playground */,
 			);
 			path = "学习笔记";
 			sourceTree = "<group>";
