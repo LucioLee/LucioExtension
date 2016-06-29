@@ -166,7 +166,7 @@ label.textColor = drawView.lineColor
 label.font = UIFont.systemFontOfSize(8)
 label.text = "指数/时间"
 label.frame = CGRectMake(10, drawView.frame.size.height - 20, 10, 10)
-label.transform = CGAffineTransformMakeRotation(-155/180)
+label.transform = CGAffineTransformMakeRotation(-CGFloat(M_PI_2/2))
 label.sizeToFit()
 drawView.addSubview(label)
 drawView
