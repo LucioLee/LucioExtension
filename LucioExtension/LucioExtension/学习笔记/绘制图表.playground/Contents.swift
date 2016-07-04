@@ -122,12 +122,11 @@ class LineChartView: UIView {
                 CGContextAddLineToPoint(context, pointWithOffset(point, offset))
             }
         }
-        // 画点
         CGContextDrawPath(context, .Stroke)
+        // 画点
         for point in linePoints {
-            CGContextMoveToPoint(context, pointWithOffset(point, offset))
-            CGContextAddCircle(context, pointWithOffset(point, offset), 1.5)
-            CGContextDrawPath(context, .Fill)
+            CGContextAddCircle(context, pointWithOffset(point, offset), 2)
+            CGContextDrawPath(context, .Stroke)
         }
         
         // 画阴影
@@ -137,26 +136,27 @@ class LineChartView: UIView {
                 let point = linePoints[index]
                 let rightPoint = linePoints[index + 1]
                 if point.y > leftPoint.y && point.y > rightPoint.y {
-                    
-                    CGContextMoveToPoint(context, pointWithOffset(leftPoint, offset))
-                    CGContextAddLineToPoint(context, pointWithOffset(point, offset))
-                    CGContextAddLineToPoint(context, pointWithOffset(rightPoint, offset))
-                    CGContextSaveGState(context)
-                    CGContextClip(context)
-                    let colorSpace = CGColorSpaceCreateDeviceRGB()
-                    let colors:CFArray = [lineColor.colorWithAlphaComponent(0.2).CGColor,UIColor.whiteColor().colorWithAlphaComponent(0.3).CGColor]
-                    var location:[CGFloat] = [0,1.0]
-                    let gradient = CGGradientCreateWithColors(colorSpace, colors, &location)
-                    let higherPoint = leftPoint.y > rightPoint.y ? leftPoint : rightPoint
-                    CGContextDrawLinearGradient(context, gradient, pointWithOffset(point, offset), pointWithOffset(higherPoint, offset), .DrawsAfterEndLocation)
-                    CGContextRestoreGState(context)
+                    autoreleasepool({ 
+                        CGContextMoveToPoint(context, pointWithOffset(leftPoint, offset))
+                        CGContextAddLineToPoint(context, pointWithOffset(point, offset))
+                        CGContextAddLineToPoint(context, pointWithOffset(rightPoint, offset))
+                        CGContextSaveGState(context)
+                        CGContextClip(context)
+                        let colorSpace = CGColorSpaceCreateDeviceRGB()
+                        let colors:CFArray = [lineColor.colorWithAlphaComponent(0.2).CGColor,UIColor.whiteColor().colorWithAlphaComponent(0.3).CGColor]
+                        var location:[CGFloat] = [0,1.0]
+                        let gradient = CGGradientCreateWithColors(colorSpace, colors, &location)
+                        let higherPoint = leftPoint.y > rightPoint.y ? leftPoint : rightPoint
+                        CGContextDrawLinearGradient(context, gradient, pointWithOffset(point, offset), pointWithOffset(higherPoint, offset), .DrawsAfterEndLocation)
+                        CGContextRestoreGState(context)
+                    })
                 }
             }
         }
     }
 }
 
-let drawView = LineChartView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 1200, height: 700)))
+let drawView = LineChartView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 1050, height: 650)))
 drawView.backgroundColor = UIColor.whiteColor()
 
 drawView.linePoints = [CGPoint.zero,CGPoint(x: 10,y: 120),CGPoint(x: 20,y: 17),CGPoint(x: 30,y: 210),CGPoint(x: 40,y: 40),CGPoint(x: 50,y: 400),CGPoint(x: 60,y: 40),CGPoint(x: 70,y: 100),CGPoint(x: 80,y: 80),CGPoint(x: 90,y: 420),CGPoint(x: 100,y: 43),CGPoint(x: 110,y: 330),CGPoint(x: 120,y: 80),CGPoint(x: 130,y: 120),CGPoint(x: 140,y: 600),CGPoint(x: 150,y: 80),CGPoint(x: 160,y: 557),CGPoint(x: 170,y: 54),CGPoint(x: 180,y: 178),CGPoint(x: 190,y: 89),CGPoint(x: 200,y: 123),CGPoint(x: 210,y: 19),CGPoint(x: 220,y: 105),CGPoint(x: 230,y: 35),CGPoint(x: 240,y: 285),CGPoint(x: 250,y: 60),CGPoint(x: 260,y: 354),CGPoint(x: 270,y: 178),CGPoint(x: 280,y: 89),CGPoint(x: 290,y: 123),CGPoint(x: 300,y: 79),CGPoint(x: 310,y: 165),CGPoint(x: 320,y: 35),CGPoint(x: 330,y: 330),CGPoint(x: 340,y: 80),CGPoint(x: 350,y: 120),CGPoint(x: 360,y: 300),CGPoint(x: 370,y: 80),CGPoint(x: 380,y: 557),CGPoint(x: 390,y: 54),CGPoint(x: 400,y: 285),CGPoint(x: 410,y: 100),CGPoint(x: 420,y: 35),CGPoint(x: 430,y: 285),CGPoint(x: 440,y: 60),CGPoint(x: 450,y: 354),CGPoint(x: 460,y: 178),CGPoint(x: 470,y: 89),CGPoint(x: 480,y: 123),CGPoint(x: 490,y: 79),CGPoint(x: 500,y: 165),CGPoint(x: 510,y: 120),CGPoint(x: 520,y: 17),CGPoint(x: 530,y: 210),CGPoint(x: 540,y: 40),CGPoint(x: 550,y: 400),CGPoint(x: 560,y: 40),CGPoint(x: 570,y: 100),CGPoint(x: 580,y: 80),CGPoint(x: 590,y: 420),CGPoint(x: 600,y: 43),CGPoint(x: 610,y: 330),CGPoint(x: 620,y: 80),CGPoint(x: 630,y: 120),CGPoint(x: 640,y: 600),CGPoint(x: 650,y: 80),CGPoint(x: 660,y: 557),CGPoint(x: 670,y: 54),CGPoint(x: 680,y: 178),CGPoint(x: 690,y: 89),CGPoint(x: 700,y: 123),CGPoint(x: 710,y: 19),CGPoint(x: 720,y: 105),CGPoint(x: 730,y: 35),CGPoint(x: 740,y: 285),CGPoint(x: 750,y: 60),CGPoint(x: 760,y: 354),CGPoint(x: 770,y: 178),CGPoint(x: 780,y: 89),CGPoint(x: 790,y: 123),CGPoint(x: 800,y: 79),CGPoint(x: 810,y: 165),CGPoint(x: 820,y: 35),CGPoint(x: 830,y: 330),CGPoint(x: 840,y: 80),CGPoint(x: 850,y: 120),CGPoint(x: 860,y: 300),CGPoint(x: 870,y: 80),CGPoint(x: 880,y: 557),CGPoint(x: 890,y: 54),CGPoint(x: 900,y: 285),CGPoint(x: 910,y: 100),CGPoint(x: 920,y: 35),CGPoint(x: 930,y: 285),CGPoint(x: 940,y: 60),CGPoint(x: 950,y: 354),CGPoint(x: 960,y: 178),CGPoint(x: 970,y: 89),CGPoint(x: 980,y: 123),CGPoint(x: 990,y: 79),CGPoint(x: 1000,y: 165)]
