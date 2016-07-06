@@ -20,15 +20,15 @@ public enum UIImageRotateOrientation : Int {
 
 public extension UIImage {
     
-    public class func imageWithColor(color: UIColor) -> UIImage {
-        return imageWithColor(color, size: CGSize(width: 1, height: 1))
+    public class func image(with color: UIColor) -> UIImage {
+        return image(with: color, and: CGSize(width: 1, height: 1))
     }
 
-    public class func imageWithColor(color:UIColor,size: CGSize) -> UIImage {
+    public class func image(with color:UIColor,and size: CGSize) -> UIImage {
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
         CGContextSetFillColorWithColor(context,color.CGColor)
-        CGContextFillRect(context, CGRect(origin: CGPointZero, size: size))
+        CGContextFillRect(context, CGRect(origin: CGPoint.zero, size: size))
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image

@@ -158,7 +158,7 @@ public extension UIView {
             return nil
         }
         
-        self.layer.renderInContext(currentContext)
+        layer.renderInContext(currentContext)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

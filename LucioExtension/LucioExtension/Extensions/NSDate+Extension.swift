@@ -46,73 +46,73 @@ public extension NSDate {
     public var quarter: Int {
         //It seems that there is an issue with the NSCalendarUnit.Quarter being ignored (haven't verified, but did see a bug reported). Anyway, it is simple enough to get around... Just use the NSDateFormatter class
         //return NSCalendar.currentCalendar().components(NSCalendarUnit.Quarter, fromDate: self).quarter
-        return Int(self.stringWithDateFormat("Q"))!
+        return Int(self.string(withFormat: "Q"))!
     }
     public var weekDayName:String {
-        return self.stringWithDateFormat("EEEE")
+        return self.string(withFormat: "EEEE")
     }
     public var monthName:String {
-        return self.stringWithDateFormat("MMMM")
+        return self.string(withFormat:"MMMM")
     }
 }
 
 public extension NSDate {
     
-    public class func fromString(dateString:String, withFormat dateFormat:String) -> NSDate? {
+    public class func from(dateString:String, WithFormat dateFormat:String) -> NSDate? {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.dateFromString(dateString)
     }
     
-    public func stringWithDateFormat(dateFormat:String) -> String {
+    public func string(withFormat dateFormat:String) -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.stringFromDate(self)
     }
     
-    public func toLocalDate() -> Self {
+    public func local() -> Self {
         let timeZone = NSTimeZone.localTimeZone()
         let seconds = timeZone.secondsFromGMTForDate(self)
         return self.dateByAddingTimeInterval(NSTimeInterval(seconds))
     }
     
-    public func appendYears(years: Int) -> NSDate? {
+    public func append(year year: Int) -> NSDate? {
         let components = NSDateComponents()
-        components.year = years
-        return self.addDateComponets(components)
+        components.year = year
+        return self.add(components: components)
     }
     
-    public func appendMonths(months: Int) -> NSDate? {
+    public func append(month month: Int) -> NSDate? {
         let components = NSDateComponents()
-        components.month = months
-        return self.addDateComponets(components)
+        components.month = month
+        return self.add(components: components)
     }
     
-    public func appendDays(days: Int) -> NSDate? {
+    public func append(day day: Int) -> NSDate? {
         let components = NSDateComponents()
-        components.day = days
-        return self.addDateComponets(components)
+        components.day = day
+        return self.add(components: components)
     }
     
-    public func appendHours(hours: Int) -> NSDate? {
+    public func append(hour hour: Int) -> NSDate? {
         let components = NSDateComponents()
-        components.hour = hours
-        return self.addDateComponets(components)
+        components.hour = hour
+        return self.add(components: components)
     }
     
-    public func appendMinutes(minutes: Int) -> NSDate? {
+    public func append(minute minute: Int) -> NSDate? {
         let components = NSDateComponents()
-        components.minute = minutes
-        return self.addDateComponets(components)
+        components.minute = minute
+        return self.add(components: components)
     }
     
-    public func appendSeconds(seconds: Int) -> NSDate? {
+    public func append(second second: Int) -> NSDate? {
         let components = NSDateComponents()
-        components.minute = seconds
-        return self.addDateComponets(components)
+        components.minute = second
+        return self.add(components: components)
     }
     
-    public func addDateComponets(components:NSDateComponents) -> NSDate? {
+    public func add(components components:NSDateComponents) -> NSDate? {
         let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
         return calendar.dateByAddingComponents(components, toDate: self, options: NSCalendarOptions(rawValue: 0))
     }

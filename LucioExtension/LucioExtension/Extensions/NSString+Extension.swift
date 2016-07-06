@@ -13,7 +13,6 @@ extension NSString {
     func trim() -> NSString {
         return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
-    
     func isEmpty() -> Bool {
         return (self as String).isEmpty
     }
