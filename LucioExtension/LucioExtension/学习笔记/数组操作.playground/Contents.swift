@@ -33,7 +33,7 @@ public extension SequenceType {
 
 public extension Array {
     
-    public subscript(index1 : Int,index2 : Int,restIndexs : Int...) -> [Element] {
+    public subscript(index1: Int,index2 : Int,restIndexs : Int...) -> [Element] {
         get {
             var results : [Element] = [self[index1],self[index2]]
             for index in restIndexs {
@@ -49,7 +49,8 @@ public extension Array {
     }
 }
 
-let array = [1,2,3,4]
+let array = [1,2,3,4,5,6,7,8,9]
 let containThree = array.some({$0 == 3})
 let allGreaterThanThree = array.some({$0 > 3})
-let values = array[0,1,3]
+let values = array[1,3,5,7]
+
