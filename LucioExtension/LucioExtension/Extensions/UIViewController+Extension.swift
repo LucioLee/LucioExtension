@@ -18,6 +18,7 @@ public extension SegueHandlerType where Self: UIViewController,SegueIdentifiers.
     func performSegueWithIdentifier(segueIdentifier:SegueIdentifiers,sender:AnyObject?) {
         performSegueWithIdentifier(segueIdentifier.rawValue, sender: sender)
     }
+    
     func segueIdentifierForSegue(segue:UIStoryboardSegue) -> SegueIdentifiers {
         guard let identifier = segue.identifier,segueIdentifier = SegueIdentifiers(rawValue: identifier) else {
             fatalError("Invalid segue identifier \(segue.identifier)")

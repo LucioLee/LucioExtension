@@ -10,7 +10,6 @@ filter.setValue("H", forKey: "inputCorrectionLevel")
 var outputImage = filter.outputImage
 let scale = CGAffineTransformMakeScale(10, 10)
 outputImage = outputImage?.imageByApplyingTransform(scale)
-
 //添加中心图片
 let image = UIImage(CIImage: outputImage!)
 UIGraphicsBeginImageContext(image.size)

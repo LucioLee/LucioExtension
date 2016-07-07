@@ -20,6 +20,12 @@ public enum UIImageRotateOrientation : Int {
 
 public extension UIImage {
     
+    var height: CGFloat {
+        return size.height
+    }
+    var width: CGFloat {
+        return size.width
+    }
     public class func image(with color: UIColor) -> UIImage {
         return image(with: color, and: CGSize(width: 1, height: 1))
     }

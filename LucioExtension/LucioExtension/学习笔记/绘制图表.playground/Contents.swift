@@ -58,16 +58,15 @@ class LineChartView: UIView {
         
         let context = UIGraphicsGetCurrentContext()
     
-        let horizontalLineCount = Int((rect.size.height - offset)/lineSpace)
-        let verticalLineCount = Int((rect.size.width - offset)/lineSpace)
+        let horizontalLineCount = Int((rect.height - offset) / lineSpace)
+        let verticalLineCount = Int((rect.width - offset) / lineSpace)
         // 画刻度
-        for index in (1...horizontalLineCount/2).reverse() {
-            let horizontalLineY = rect.size.height - offset - CGFloat(index) * lineSpace * 2
+        for index in (1...horizontalLineCount / 2).reverse() {
+            let horizontalLineY = rect.height - offset - CGFloat(index) * lineSpace * 2
             let text:NSString = "\(index * Int(lineSpace) * 2)"
             let attrs = [NSFontAttributeName:UIFont.systemFontOfSize(8),NSForegroundColorAttributeName:lineColor]
             let size = text.sizeWithAttributes(attrs)
-            
-            text.drawInRect(CGRectMake((offset - size.width)/2, horizontalLineY - size.height/2, size.width, size.height), withAttributes: attrs)
+            text.drawInRect(CGRect(x: (offset - size.width) / 2, y: horizontalLineY - size.height / 2, width: size.width, height: size.height), withAttributes: attrs)
         }
         for index in 1...verticalLineCount {
 
@@ -75,35 +74,35 @@ class LineChartView: UIView {
             let text:NSString = "\(index * Int(lineSpace) * 2)"
             let attrs = [NSFontAttributeName:UIFont.systemFontOfSize(8),NSForegroundColorAttributeName:lineColor]
             let size = text.sizeWithAttributes(attrs)
-            text.drawInRect(CGRectMake(verticalLineX - size.width/2, rect.size.height - offset/2 - size.height/2, size.width, size.height), withAttributes: attrs)
+            text.drawInRect(CGRect(x: verticalLineX - size.width / 2, y: rect.height - offset/2 - size.height/2, width: size.width, height: size.height), withAttributes: attrs)
         }
         
         // 转换坐标系
-        CGContextTranslateCTM(context, 0, rect.size.height)
+        CGContextTranslateCTM(context, 0, rect.height)
         CGContextScaleCTM(context, 1, -1)
         
-        UIColor(red: 220/255.0, green: 220/255.0, blue: 220/255.0, alpha: 1).set()
+        UIColor(red: 220.0 / 255.0, green: 220.0 / 255.0, blue: 220.0 / 255.0, alpha: 1.0).set()
         
         // 坐标轴
-        CGContextMoveToPoint(context, offset, frame.size.height)
+        CGContextMoveToPoint(context, offset, rect.height)
         CGContextAddLineToPoint(context,pointWithOffset(CGPoint.zero, offset))
-        CGContextAddLineToPoint(context, frame.size.width, offset)
+        CGContextAddLineToPoint(context, rect.width, offset)
         CGContextDrawPath(context, .Stroke)
         
         CGContextSaveGState(context)
         // 画虚线
         let horizontalMinX = offset
-        let horizontalMaxX = rect.size.width
+        let horizontalMaxX = rect.width
 
         var length: [CGFloat] = [5,5]
         CGContextSetLineDash(context, 0, &length, 2)
-        for index in 1..<horizontalLineCount+1 {
+        for index in 1..<horizontalLineCount + 1 {
             let horizontalLineY = CGFloat(index) * lineSpace + offset
             CGContextMoveToPoint(context, horizontalMinX, horizontalLineY)
             CGContextAddLineToPoint(context,horizontalMaxX, horizontalLineY)
         }
         let verticalMinY = offset
-        let verticalMaxY = rect.size.height
+        let verticalMaxY = rect.height
         for index in 1..<verticalLineCount+1 {
             let verticalLineX = CGFloat(index) * lineSpace + offset
             CGContextMoveToPoint(context, verticalLineX, verticalMinY)
@@ -131,7 +130,7 @@ class LineChartView: UIView {
         
         // 画阴影
         if showShadow == true {
-            for index in 1..<linePoints.count-1{
+            for index in 1..<linePoints.count - 1 {
                 let leftPoint = linePoints[index - 1]
                 let point = linePoints[index]
                 let rightPoint = linePoints[index + 1]

@@ -148,7 +148,7 @@ public extension UIView {
 }
 
 public extension UIView {
-    func takeSnapshot(frame: CGRect) -> UIImage? {
+    public func takeSnapshot(frame: CGRect) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(frame.size, false, 0.0)
         
         let context = UIGraphicsGetCurrentContext();

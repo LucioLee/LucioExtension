@@ -112,7 +112,7 @@ public extension NSDate {
         return self.add(components: components)
     }
     
-    public func add(components components:NSDateComponents) -> NSDate? {
+    public func add(components components: NSDateComponents) -> NSDate? {
         let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
         return calendar.dateByAddingComponents(components, toDate: self, options: NSCalendarOptions(rawValue: 0))
     }

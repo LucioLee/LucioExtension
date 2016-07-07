@@ -24,7 +24,7 @@
 		C67CE9CB1C915B9C002B7A86 /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */; };
 		C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */; };
 		C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */; };
-		C6894D6F1CBE1C7B006CFDCD /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6E1CBE1C7B006CFDCD /* NSString+Extension.swift */; };
+		C6894D6F1CBE1C7B006CFDCD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +51,9 @@
 		C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
 		C688F26B1D1E383F00FBDA72 /* 数组操作.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "数组操作.playground"; sourceTree = "<group>"; };
 		C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
-		C6894D6E1CBE1C7B006CFDCD /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
+		C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C69404B01D2422A700C3AD3B /* 绘制图表.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "绘制图表.playground"; sourceTree = "<group>"; };
+		C69900B51D2E045200C15507 /* LucioExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LucioExtension-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +124,8 @@
 				C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */,
 				C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */,
 				C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */,
-				C6894D6E1CBE1C7B006CFDCD /* NSString+Extension.swift */,
+				C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */,
+				C69900B51D2E045200C15507 /* LucioExtension-Bridging-Header.h */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,7 +165,7 @@
 		C67CE99B1C91556D002B7A86 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Person;
 				TargetAttributes = {
@@ -215,7 +217,7 @@
 				C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */,
 				C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */,
 				C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */,
-				C6894D6F1CBE1C7B006CFDCD /* NSString+Extension.swift in Sources */,
+				C6894D6F1CBE1C7B006CFDCD /* String+Extension.swift in Sources */,
 				C67CE9C41C915996002B7A86 /* CAMediaTimingFunction+Extension.swift in Sources */,
 				C67CE9BA1C9156A2002B7A86 /* UIView+Extension.swift in Sources */,
 				C67CE9BE1C9157FD002B7A86 /* Array+Extension.swift in Sources */,
@@ -333,10 +335,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LucioExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Person.LucioExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LucioExtension/Extensions/LucioExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -344,10 +349,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LucioExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Person.LucioExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LucioExtension/Extensions/LucioExtension-Bridging-Header.h";
 			};
 			name = Release;
 		};
