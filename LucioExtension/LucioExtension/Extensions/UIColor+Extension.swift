@@ -11,7 +11,7 @@ import UIKit
 public extension UIColor {
     
     public class func pink() -> UIColor {
-        return UIColor(red: 255.0/255.0, green: 192.0/255.0, blue: 203.0/255.0, alpha: 1)
+        return UIColor(red: 255.0 / 255.0, green: 192.0 / 255.0, blue: 203.0 / 255.0, alpha: 1)
     }
     
     public class func random() -> UIColor {
