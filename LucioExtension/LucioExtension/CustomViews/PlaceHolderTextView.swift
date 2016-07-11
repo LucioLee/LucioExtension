@@ -18,14 +18,12 @@ public class PlaceHolderTextView: UITextView {
             setNeedsDisplay()
         }
     }
-    
     public var placeHolder: String? = nil {
         didSet {
             _placeHolderLabel.text = placeHolder
             setNeedsDisplay()
         }
     }
-    
     override public var text: String! {
         didSet {
             textDidChange()
@@ -61,7 +59,7 @@ public class PlaceHolderTextView: UITextView {
     private func addPlaceHolderLabel() {
         _placeHolderLabel = UILabel()
         _placeHolderLabel.numberOfLines = 0
-        _placeHolderLabel.font = self.font ?? UIFont.systemFontOfSize(16)
+        _placeHolderLabel.font = font ?? UIFont.systemFontOfSize(16)
         _placeHolderLabel.textColor = UIColor.lightGrayColor()
         _placeHolderLabel.backgroundColor = UIColor.clearColor()
         addSubview(_placeHolderLabel)
@@ -74,5 +72,7 @@ public class PlaceHolderTextView: UITextView {
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+        _placeHolderLabel = nil
+        attributedPlaceHolder = nil
     }
 }

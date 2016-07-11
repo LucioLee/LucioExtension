@@ -25,6 +25,7 @@
 		C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */; };
 		C6803DC81D2F60CE00757792 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6803DC71D2F60CE00757792 /* PlaceHolderTextView.swift */; };
 		C6803DCA1D2F60E100757792 /* InsetsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6803DC91D2F60E100757792 /* InsetsLabel.swift */; };
+		C6803DCC1D2F68C800757792 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6803DCB1D2F68C800757792 /* UITextView+Extension.swift */; };
 		C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */; };
 		C6894D6F1CBE1C7B006CFDCD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
 		C6803DC71D2F60CE00757792 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		C6803DC91D2F60E100757792 /* InsetsLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsetsLabel.swift; sourceTree = "<group>"; };
+		C6803DCB1D2F68C800757792 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		C688F26B1D1E383F00FBDA72 /* 数组操作.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "数组操作.playground"; sourceTree = "<group>"; };
 		C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				C64DC1791D1A38EA00CB1708 /* UIViewController+Extension.swift */,
 				C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */,
 				C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */,
+				C6803DCB1D2F68C800757792 /* UITextView+Extension.swift */,
 				C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */,
 				C67CE9BD1C9157FD002B7A86 /* Array+Extension.swift */,
 				C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */,
@@ -229,6 +232,7 @@
 				C67CE9C21C91597B002B7A86 /* UIColor+Extension.swift in Sources */,
 				C64DC17A1D1A38EA00CB1708 /* UIViewController+Extension.swift in Sources */,
 				C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */,
+				C6803DCC1D2F68C800757792 /* UITextView+Extension.swift in Sources */,
 				C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */,
 				C6803DCA1D2F60E100757792 /* InsetsLabel.swift in Sources */,
 				C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */,
