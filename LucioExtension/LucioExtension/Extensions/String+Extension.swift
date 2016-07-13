@@ -43,6 +43,13 @@ public extension String {
         result.destroy()
         return hashString
     }
+    public func appendPathComponent(string: String) -> String {
+        if string.isEmpty {return self}
+        return self + "/" + string
+    }
+    public func deleteLastPathComponent() -> String {
+        return (self as NSString).stringByDeletingLastPathComponent
+    }
 }
 
 public extension NSString {
