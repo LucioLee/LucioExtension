@@ -23,19 +23,14 @@
 		C67CE9C91C915A3D002B7A86 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C81C915A3D002B7A86 /* Common.swift */; };
 		C67CE9CB1C915B9C002B7A86 /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */; };
 		C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */; };
-		C6803DC81D2F60CE00757792 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6803DC71D2F60CE00757792 /* PlaceHolderTextView.swift */; };
-		C6803DCA1D2F60E100757792 /* InsetsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6803DC91D2F60E100757792 /* InsetsLabel.swift */; };
 		C6803DCC1D2F68C800757792 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6803DCB1D2F68C800757792 /* UITextView+Extension.swift */; };
 		C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */; };
 		C6894D6F1CBE1C7B006CFDCD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C647C2011D1D3F95008F7A4C /* 图片方向修正.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "图片方向修正.playground"; sourceTree = "<group>"; };
 		C64DC1771D1A37E000CB1708 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		C64DC1791D1A38EA00CB1708 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		C65334EC1D1BF42700C8DC09 /* 图片旋转.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "图片旋转.playground"; sourceTree = "<group>"; };
-		C65334ED1D1BF42700C8DC09 /* 生成二维码.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "生成二维码.playground"; sourceTree = "<group>"; };
 		C67CE9A31C91556D002B7A86 /* LucioExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LucioExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CE9A61C91556D002B7A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67CE9A81C91556D002B7A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,13 +47,9 @@
 		C67CE9C81C915A3D002B7A86 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
-		C6803DC71D2F60CE00757792 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
-		C6803DC91D2F60E100757792 /* InsetsLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsetsLabel.swift; sourceTree = "<group>"; };
 		C6803DCB1D2F68C800757792 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
-		C688F26B1D1E383F00FBDA72 /* 数组操作.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "数组操作.playground"; sourceTree = "<group>"; };
 		C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		C69404B01D2422A700C3AD3B /* 绘制图表.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "绘制图表.playground"; sourceTree = "<group>"; };
 		C69900B51D2E045200C15507 /* LucioExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LucioExtension-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,18 +64,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C65334EB1D1BF42700C8DC09 /* 学习笔记 */ = {
-			isa = PBXGroup;
-			children = (
-				C69404B01D2422A700C3AD3B /* 绘制图表.playground */,
-				C647C2011D1D3F95008F7A4C /* 图片方向修正.playground */,
-				C65334EC1D1BF42700C8DC09 /* 图片旋转.playground */,
-				C65334ED1D1BF42700C8DC09 /* 生成二维码.playground */,
-				C688F26B1D1E383F00FBDA72 /* 数组操作.playground */,
-			);
-			path = "学习笔记";
-			sourceTree = "<group>";
-		};
 		C67CE99A1C91556D002B7A86 = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +83,6 @@
 		C67CE9A51C91556D002B7A86 /* LucioExtension */ = {
 			isa = PBXGroup;
 			children = (
-				C6803DC61D2F60BE00757792 /* CustomViews */,
-				C65334EB1D1BF42700C8DC09 /* 学习笔记 */,
 				C67CE9C51C915A02002B7A86 /* Utils */,
 				C67CE9B81C915683002B7A86 /* Extensions */,
 				C67CE9A61C91556D002B7A86 /* AppDelegate.swift */,
@@ -145,15 +122,6 @@
 				C67CE9C81C915A3D002B7A86 /* Common.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		C6803DC61D2F60BE00757792 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				C6803DC91D2F60E100757792 /* InsetsLabel.swift */,
-				C6803DC71D2F60CE00757792 /* PlaceHolderTextView.swift */,
-			);
-			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +202,7 @@
 				C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */,
 				C6803DCC1D2F68C800757792 /* UITextView+Extension.swift in Sources */,
 				C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */,
-				C6803DCA1D2F60E100757792 /* InsetsLabel.swift in Sources */,
 				C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */,
-				C6803DC81D2F60CE00757792 /* PlaceHolderTextView.swift in Sources */,
 				C6894D6F1CBE1C7B006CFDCD /* String+Extension.swift in Sources */,
 				C67CE9C41C915996002B7A86 /* CAMediaTimingFunction+Extension.swift in Sources */,
 				C67CE9BA1C9156A2002B7A86 /* UIView+Extension.swift in Sources */,
