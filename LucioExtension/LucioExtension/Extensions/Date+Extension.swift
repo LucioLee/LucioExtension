@@ -46,32 +46,45 @@ public extension Date {
     public var quarter: Int {
         return NSCalendar.current.component(Calendar.Component.quarter, from: self)
     }
+    public var nanosecond: Int {
+        return NSCalendar.current.component(Calendar.Component.nanosecond, from: self)
+    }
+    public var timeZone: Int {
+        return NSCalendar.current.component(Calendar.Component.timeZone, from: self)
+    }
     public var weekDayName: String {
-        return self.string(withFormat: "EEEE")
+        return self.format("EEEE")
     }
     public var monthName: String {
-        return self.string(withFormat:"MMMM")
+        return self.format("MMMM")
     }
 }
-
 public extension Date {
     
-    public static func from(dateString:String, WithFormat dateFormat:String) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = dateFormat
-        return dateFormatter.date(from: dateString)
+    public static var local: Date {
+        let nowDate = Date()
+        let timeZone = NSTimeZone.local
+        let seconds = timeZone.secondsFromGMT(for: nowDate)
+        return nowDate.addingTimeInterval(TimeInterval(seconds))
     }
     
-    public func string(withFormat dateFormat:String) -> String {
+    public static var now: Date {
+        return Date()
+    }
+    
+    public static func from(string: String, withFormat dateFormat:String) -> Date? {
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        dateFormatter.locale = NSLocale.current
+        return dateFormatter.date(from: string)
+    }
+    
+    public func format(_ dateFormat:String, timeZone: TimeZone = TimeZone.current, locale: Locale = Locale.current) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = locale
+        dateFormatter.timeZone = timeZone
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: self)
-    }
-    
-    public func local() -> Date {
-        let timeZone = NSTimeZone.local
-        let seconds = timeZone.secondsFromGMT(for: self)
-        return self.addingTimeInterval(TimeInterval(seconds))
     }
     
     public func append(year: Int) -> Date? {
@@ -111,7 +124,8 @@ public extension Date {
     }
     
     public func add(components: DateComponents) -> Date? {
-        let calendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
-        return calendar.date(byAdding: components , to: self, options: NSCalendar.Options(rawValue: 0))
+        var calendar = NSCalendar.current
+        calendar.timeZone = NSTimeZone.local
+        return calendar.date(byAdding: components, to: self)
     }
 }

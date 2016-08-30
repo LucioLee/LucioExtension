@@ -15,11 +15,11 @@ public protocol SegueHandlerType {
 
 public extension SegueHandlerType where Self: UIViewController,SegueIdentifiers.RawValue == String {
     
-    func performSegueWithIdentifier(segueIdentifier:SegueIdentifiers,sender:AnyObject?) {
+    func performSegueWithIdentifier(_ segueIdentifier:SegueIdentifiers,sender:AnyObject?) {
         performSegue(withIdentifier: segueIdentifier.rawValue, sender: sender)
     }
     
-    func segueIdentifierForSegue(segue:UIStoryboardSegue) -> SegueIdentifiers {
+    func segueIdentifierForSegue(_ segue:UIStoryboardSegue) -> SegueIdentifiers {
         guard let identifier = segue.identifier, let segueIdentifier = SegueIdentifiers(rawValue: identifier) else {
             fatalError("Invalid segue identifier \(segue.identifier)")
         }

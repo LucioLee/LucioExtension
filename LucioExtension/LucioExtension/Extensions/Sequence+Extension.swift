@@ -10,10 +10,10 @@ import Foundation
 
 public extension Equatable {
     
-    public func isIn<T: Sequence>(collection: T) -> Bool where T.Iterator.Element == Self {
+    public func isIn<T: Sequence>(_ collection: T) -> Bool where T.Iterator.Element == Self {
         return collection.contains(self)
     }
-    public func isIn(collection: Self...) -> Bool {
+    public func isIn(_ collection: Self...) -> Bool {
         return collection.contains(self)
     }
 }

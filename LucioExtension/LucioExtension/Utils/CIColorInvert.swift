@@ -10,15 +10,15 @@ import UIKit
 
 
 // 颜色取反
-public class CIColorInvert: CIFilter {
+open class CIColorInvert: CIFilter {
     
-    public var inputImage = CIImage()
+    open var inputImage = CIImage()
     
     convenience init(inputImage:CIImage) {
         self.init()
         self.inputImage = inputImage
     }
-    override public var outputImage: CIImage? {
+    override open var outputImage: CIImage? {
         let filter = CIFilter(name: "CIColorMatrix",
                               withInputParameters:[kCIInputImageKey:inputImage,
                                 "inputRVector":CIVector(x: -1),

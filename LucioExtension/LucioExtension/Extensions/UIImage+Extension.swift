@@ -9,13 +9,13 @@
 import UIKit
 
 public enum UIImageRotateOrientation : Int {
-    case Left // 90 deg CCW
-    case Right // 90 deg CW
-    case Down // 180 deg rotation
-    case Mirrored // as above but image mirrored along other axis. horizontal flip
-    case DownMirrored // horizontal flip
-    case LeftMirrored // vertical flip
-    case RightMirrored // vertical flip
+    case left // 90 deg CCW
+    case right // 90 deg CW
+    case down // 180 deg rotation
+    case mirrored // as above but image mirrored along other axis. horizontal flip
+    case downMirrored // horizontal flip
+    case leftMirrored // vertical flip
+    case rightMirrored // vertical flip
 }
 
 public extension UIImage {
@@ -51,11 +51,7 @@ public extension UIImage {
         return newImage
     }
 
-    public class func image(with color: UIColor) -> UIImage {
-        return image(with: color, and: CGSize(width: 1, height: 1))
-    }
-
-    public class func image(with color:UIColor,and size: CGSize) -> UIImage {
+    public class func image(with color:UIColor, and size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()!
         context.setFillColor(color.cgColor)
@@ -106,33 +102,33 @@ public extension UIImage {
         return img
     }
     
-    public func rotate(orientation: UIImageRotateOrientation) -> UIImage {
+    public func rotate(with orientation: UIImageRotateOrientation) -> UIImage {
         var transform = CGAffineTransform.identity
         switch orientation {
-        case .Mirrored :
+        case .mirrored :
             transform = transform.translatedBy(x: size.width,y: 0)
             transform = transform.scaledBy(x: -1, y: 1)
-        case .Left :
+        case .left :
             transform = transform.translatedBy(x: size.height,y: 0)
             transform = transform.rotated(by: CGFloat(M_PI_2))
-        case .LeftMirrored :
+        case .leftMirrored :
             transform = transform.rotated(by: CGFloat(M_PI_2))
             transform = transform.translatedBy(x: size.width ,y: -size.height)
             transform = transform.scaledBy(x: -1, y: 1)
-        case .Down :
+        case .down :
             transform = transform.translatedBy(x: size.width,y: size.height)
             transform = transform.rotated(by: CGFloat(M_PI))
-        case .DownMirrored :
+        case .downMirrored :
             transform = transform.translatedBy(x: 0,y: size.height)
             transform = transform.scaledBy(x: 1, y: -1)
-        case .Right :
+        case .right :
             transform = transform.translatedBy(x: 0,y: size.width)
             transform = transform.rotated(by: -CGFloat(M_PI_2))
-        case .RightMirrored :
+        case .rightMirrored :
             transform = transform.rotated(by: CGFloat(M_PI_2))
             transform = transform.scaledBy(x: 1, y: -1)
         }
-        let drawSize = [.Left, .LeftMirrored, .Right, .RightMirrored].contains(orientation) ? CGSize(width: size.height, height: size.width) : CGSize(width: size.width, height: size.height)
+        let drawSize = [.left, .leftMirrored, .right, .rightMirrored].contains(orientation) ? CGSize(width: size.height, height: size.width) : CGSize(width: size.width, height: size.height)
         
         let context = CGContext(data: nil, width: Int(drawSize.width), height: Int(drawSize.height), bitsPerComponent: cgImage!.bitsPerComponent,bytesPerRow: 0, space: cgImage!.colorSpace!, bitmapInfo: cgImage!.bitmapInfo.rawValue)!
         context.concatenate(transform)
@@ -142,5 +138,3 @@ public extension UIImage {
         return img
     }
 }
-
-

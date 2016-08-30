@@ -11,7 +11,7 @@ import Foundation
 public extension String {
     
     public var trim: String {
-        return trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
     public var isPureInt: Bool {
@@ -20,14 +20,14 @@ public extension String {
         return scanner.scanInt(&value) && scanner.isAtEnd
     }
     
-    public var lowercaseFirstCharacterString: String {
+    public var lowercaseFirstCharacter: String {
         let offsetedIndex = index(startIndex, offsetBy: 1)
         let range = startIndex..<offsetedIndex
         let firstChar = substring(to: offsetedIndex).lowercased()
         return replacingCharacters(in: range, with: firstChar)
     }
     
-    public var uppercaseFirstCharacterString: String {
+    public var uppercaseFirstCharacter: String {
         let offsetedIndex = index(startIndex, offsetBy: 1)
         let range = startIndex..<offsetedIndex
         let firstChar = substring(to: offsetedIndex).uppercased()
@@ -44,14 +44,5 @@ public extension String {
         stride(from: 0, to: digestLen, by: 1).forEach{ hashString += String(format: "%0X", result[$0]) }
         result.deinitialize()
         return hashString
-    }
-    
-    public func appendPathComponent(string: String) -> String {
-        if string.isEmpty { return self }
-        return self + "/" + string
-    }
-    
-    public func deleteLastPathComponent() -> String {
-        return (self as NSString).deletingLastPathComponent
     }
 }
