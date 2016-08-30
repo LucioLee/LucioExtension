@@ -11,70 +11,47 @@ import Foundation
 public extension String {
     
     public var trim: String {
-        return stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        return trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
     }
     
     public var isPureInt: Bool {
-        let scanner = NSScanner(string: self)
-        var value: Int32 = 0 //从下标0开始，扫描到的数字，碰到非数字就停止。比如 string = "12ss",则value = 12
-        return scanner.scanInt(&value) && scanner.atEnd
+        let scanner = Scanner(string: self)
+        var value: Int = 0 //从下标0开始，扫描到的数字，碰到非数字就停止。比如 string = "12ss",则value = 12
+        return scanner.scanInt(&value) && scanner.isAtEnd
     }
     
     public var lowercaseFirstCharacterString: String {
-        let range = startIndex..<startIndex.advancedBy(1)
-        let firstChar = substringToIndex(startIndex.advancedBy(1)).lowercaseString
-        return stringByReplacingCharactersInRange(range, withString: firstChar)
+        let offsetedIndex = index(startIndex, offsetBy: 1)
+        let range = startIndex..<offsetedIndex
+        let firstChar = substring(to: offsetedIndex).lowercased()
+        return replacingCharacters(in: range, with: firstChar)
     }
     
     public var uppercaseFirstCharacterString: String {
-        let range = startIndex..<startIndex.advancedBy(1)
-        let firstChar = substringToIndex(startIndex.advancedBy(1)).uppercaseString
-        return stringByReplacingCharactersInRange(range, withString: firstChar)
+        let offsetedIndex = index(startIndex, offsetBy: 1)
+        let range = startIndex..<offsetedIndex
+        let firstChar = substring(to: offsetedIndex).uppercased()
+        return replacingCharacters(in: range, with: firstChar)
     }
     
     public var md5: String {
-        let cStr = cStringUsingEncoding(NSUTF8StringEncoding)
-        let cStrLen = CC_LONG(lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let cStr = cString(using: String.Encoding.utf8)
+        let cStrLen = CC_LONG(lengthOfBytes(using: String.Encoding.utf8))
         let digestLen = Int(CC_MD5_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         CC_MD5(cStr!,cStrLen,result)
         var hashString = ""
-        0.stride(to: digestLen, by: 1).forEach{ hashString += String(format: "%0X", result[$0]) }
-        result.destroy()
+        stride(from: 0, to: digestLen, by: 1).forEach{ hashString += String(format: "%0X", result[$0]) }
+        result.deinitialize()
         return hashString
     }
+    
     public func appendPathComponent(string: String) -> String {
-        if string.isEmpty {return self}
+        if string.isEmpty { return self }
         return self + "/" + string
     }
+    
     public func deleteLastPathComponent() -> String {
-        return (self as NSString).stringByDeletingLastPathComponent
-    }
-}
-
-public extension NSString {
-    
-    public func trim() -> NSString {
-        return (self as String).trim
-    }
-    
-    public func isEmpty() -> Bool {
-        return (self as String).isEmpty
-    }
-    
-    public func isPureInt() -> Bool {
-        return (self as String).isPureInt
-    }
-    
-    public func lowercaseFirstCharacterString() -> NSString {
-        return (self as String).lowercaseFirstCharacterString
-    }
-    
-    public func uppercaseFirstCharacterString() -> NSString {
-        return (self as String).uppercaseFirstCharacterString
-    }
-    
-    public func md5() -> String {
-        return (self as String).md5
+        return (self as NSString).deletingLastPathComponent
     }
 }
