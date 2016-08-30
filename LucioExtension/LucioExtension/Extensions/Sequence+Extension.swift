@@ -8,6 +8,16 @@
 
 import Foundation
 
+public extension Equatable {
+    
+    public func isIn<T: SequenceType where T.Generator.Element == Self>(collection: T) -> Bool {
+        return collection.contains(self)
+    }
+    public func isIn(collection: Self...) -> Bool {
+        return collection.contains(self)
+    }
+}
+
 public extension SequenceType {
     @warn_unused_result
     public func some(@noescape includeElement:(Self.Generator.Element) throws -> Bool) rethrows -> Bool {

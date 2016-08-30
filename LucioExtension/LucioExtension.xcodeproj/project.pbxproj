@@ -15,7 +15,7 @@
 		C67CE9AE1C91556D002B7A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67CE9AD1C91556D002B7A86 /* Assets.xcassets */; };
 		C67CE9B11C91556D002B7A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CE9AF1C91556D002B7A86 /* LaunchScreen.storyboard */; };
 		C67CE9BA1C9156A2002B7A86 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */; };
-		C67CE9BE1C9157FD002B7A86 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9BD1C9157FD002B7A86 /* Array+Extension.swift */; };
+		C67CE9BE1C9157FD002B7A86 /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9BD1C9157FD002B7A86 /* Sequence+Extension.swift */; };
 		C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */; };
 		C67CE9C21C91597B002B7A86 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */; };
 		C67CE9C41C915996002B7A86 /* CAMediaTimingFunction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */; };
@@ -44,7 +44,7 @@
 		C67CE9B01C91556D002B7A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C67CE9B21C91556D002B7A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		C67CE9BD1C9157FD002B7A86 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		C67CE9BD1C9157FD002B7A86 /* Sequence+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
 		C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+Extension.swift"; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */,
 				C6803DCB1D2F68C800757792 /* UITextView+Extension.swift */,
 				C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */,
-				C67CE9BD1C9157FD002B7A86 /* Array+Extension.swift */,
+				C67CE9BD1C9157FD002B7A86 /* Sequence+Extension.swift */,
 				C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */,
 				C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */,
 				C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */,
@@ -240,7 +240,7 @@
 				C6894D6F1CBE1C7B006CFDCD /* String+Extension.swift in Sources */,
 				C67CE9C41C915996002B7A86 /* CAMediaTimingFunction+Extension.swift in Sources */,
 				C67CE9BA1C9156A2002B7A86 /* UIView+Extension.swift in Sources */,
-				C67CE9BE1C9157FD002B7A86 /* Array+Extension.swift in Sources */,
+				C67CE9BE1C9157FD002B7A86 /* Sequence+Extension.swift in Sources */,
 				C67CE9C71C915A0C002B7A86 /* CIColorInvert.swift in Sources */,
 				C67CE9A91C91556D002B7A86 /* ViewController.swift in Sources */,
 				C67CE9C91C915A3D002B7A86 /* Common.swift in Sources */,

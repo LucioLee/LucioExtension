@@ -20,12 +20,37 @@ public enum UIImageRotateOrientation : Int {
 
 public extension UIImage {
     
-    var height: CGFloat {
+    public var height: CGFloat {
         return size.height
     }
-    var width: CGFloat {
+    public var width: CGFloat {
         return size.width
     }
+    
+    public func circle(withBorderWidth width: CGFloat = 0, borderColor: UIColor = UIColor.blackColor()) -> UIImage {
+        
+        let diameter = min(size.width, size.height)
+        precondition(width <= diameter / 2.0, "Border width is too large !")
+        
+        let originX = (diameter - size.width) / 2.0
+        let originY = (diameter - size.height) / 2.0
+        let newSize = CGSize(width: diameter, height: diameter)
+        UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetStrokeColorWithColor(context, borderColor.CGColor)
+        CGContextSetLineWidth(context, width)
+        let rect = CGRect(origin: CGPoint.zero, size: newSize)
+        CGContextAddEllipseInRect(context, rect)
+        CGContextClip(context)
+        self.drawInRect(CGRect(origin: CGPoint(x: originX, y: originY), size: size))
+        let offset = round(width / 2.0)
+        CGContextAddEllipseInRect(context, CGRectInset(rect, offset, offset))
+        CGContextStrokePath(context)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+
     public class func image(with color: UIColor) -> UIImage {
         return image(with: color, and: CGSize(width: 1, height: 1))
     }
