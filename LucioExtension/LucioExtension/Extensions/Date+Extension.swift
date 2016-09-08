@@ -49,9 +49,6 @@ public extension Date {
     public var nanosecond: Int {
         return NSCalendar.current.component(Calendar.Component.nanosecond, from: self)
     }
-    public var timeZone: Int {
-        return NSCalendar.current.component(Calendar.Component.timeZone, from: self)
-    }
     public var weekDayName: String {
         return self.format("EEEE")
     }
@@ -125,7 +122,7 @@ public extension Date {
     
     public func add(components: DateComponents) -> Date? {
         var calendar = NSCalendar.current
-        calendar.timeZone = NSTimeZone.local
+        calendar.timeZone = TimeZone.current
         return calendar.date(byAdding: components, to: self)
     }
 }
