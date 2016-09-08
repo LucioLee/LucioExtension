@@ -44,7 +44,7 @@ public extension Date {
         return NSCalendar.current.component(Calendar.Component.weekdayOrdinal, from: self)
     }
     public var quarter: Int {
-        return NSCalendar.current.component(Calendar.Component.quarter, from: self)
+        return Int(self.format("Q"))!
     }
     public var nanosecond: Int {
         return NSCalendar.current.component(Calendar.Component.nanosecond, from: self)
@@ -126,3 +126,4 @@ public extension Date {
         return calendar.date(byAdding: components, to: self)
     }
 }
+
