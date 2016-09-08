@@ -44,16 +44,16 @@ public extension Date {
         return NSCalendar.current.component(Calendar.Component.weekdayOrdinal, from: self)
     }
     public var quarter: Int {
-        return Int(self.format("Q"))!
+        return Int(self.format(by: "Q"))!
     }
     public var nanosecond: Int {
         return NSCalendar.current.component(Calendar.Component.nanosecond, from: self)
     }
     public var weekDayName: String {
-        return self.format("EEEE")
+        return self.format(by: "EEEE")
     }
     public var monthName: String {
-        return self.format("MMMM")
+        return self.format(by: "MMMM")
     }
 }
 public extension Date {
@@ -76,7 +76,7 @@ public extension Date {
         return dateFormatter.date(from: string)
     }
     
-    public func format(_ dateFormat:String, timeZone: TimeZone = TimeZone.current, locale: Locale = Locale.current) -> String {
+    public func format(by dateFormat:String, timeZone: TimeZone = TimeZone.current, locale: Locale = Locale.current) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = locale
         dateFormatter.timeZone = timeZone
