@@ -20,7 +20,7 @@ public extension Equatable {
 
 public extension Sequence {
     
-    public func some(includeElement: (Self.Iterator.Element) throws -> Bool) rethrows -> Bool {
+    public func some(_ includeElement: (Self.Iterator.Element) throws -> Bool) rethrows -> Bool {
     
         for element in self {
             do {
@@ -32,7 +32,7 @@ public extension Sequence {
         return false;
     }
     
-    public func every(includeElement:(Self.Iterator.Element) throws -> Bool) rethrows -> Bool {
+    public func every(_ includeElement:(Self.Iterator.Element) throws -> Bool) rethrows -> Bool {
         
         for element in self {
             do {
