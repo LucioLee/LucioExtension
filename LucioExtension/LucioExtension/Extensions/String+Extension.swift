@@ -20,6 +20,16 @@ public extension String {
         return scanner.scanInt(&value) && scanner.isAtEnd
     }
     
+    public var escaped: String {
+        let generalDelimitersToEncode = ":#[]@" // does not include "?" or "/" due to RFC 3986 - Section 3.4
+        let subDelimitersToEncode = "!$&'()*+,;="
+        
+        var allowedCharacterSet = CharacterSet.urlQueryAllowed
+        allowedCharacterSet.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
+        
+        return self.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet) ?? ""
+    }
+    
     public var lowercaseFirstCharacter: String {
         let offsetedIndex = index(startIndex, offsetBy: 1)
         let range = startIndex..<offsetedIndex
