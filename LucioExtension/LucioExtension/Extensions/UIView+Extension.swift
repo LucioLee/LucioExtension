@@ -89,12 +89,12 @@ public extension UIView {
     @IBInspectable public var borderColor: UIColor? {
         get {
             if let borderColor = layer.borderColor {
-                return UIColor(CGColor: borderColor)
+                return UIColor(cgColor: borderColor)
             }
-            return .None
+            return .none
         }
         set {
-            layer.borderColor = newValue?.CGColor
+            layer.borderColor = newValue?.cgColor
         }
     }
     
@@ -110,12 +110,12 @@ public extension UIView {
     @IBInspectable public var shadowColor: UIColor? {
         get {
             if let shadowColor = layer.shadowColor {
-                return UIColor(CGColor: shadowColor)
+                return UIColor(cgColor: shadowColor)
             }
-            return .None
+            return .none
         }
         set {
-            layer.shadowColor = newValue?.CGColor
+            layer.shadowColor = newValue?.cgColor
         }
     }
     
@@ -151,14 +151,14 @@ public extension UIView {
     public func takeSnapshot(frame: CGRect) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(frame.size, false, 0.0)
         
-        let context = UIGraphicsGetCurrentContext();
-        CGContextTranslateCTM(context, frame.origin.x * -1, frame.origin.y * -1)
+        let context = UIGraphicsGetCurrentContext()!
+        context.translateBy(x: frame.origin.x * -1, y: frame.origin.y * -1)
         
         guard let currentContext = UIGraphicsGetCurrentContext() else {
             return nil
         }
         
-        layer.renderInContext(currentContext)
+        layer.render(in: currentContext)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

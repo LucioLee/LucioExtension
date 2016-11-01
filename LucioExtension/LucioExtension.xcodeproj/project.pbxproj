@@ -16,14 +16,17 @@
 		C67CE9B11C91556D002B7A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CE9AF1C91556D002B7A86 /* LaunchScreen.storyboard */; };
 		C67CE9BA1C9156A2002B7A86 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */; };
 		C67CE9BE1C9157FD002B7A86 /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9BD1C9157FD002B7A86 /* Sequence+Extension.swift */; };
-		C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */; };
+		C67CE9C01C915815002B7A86 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9BF1C915815002B7A86 /* Date+Extension.swift */; };
 		C67CE9C21C91597B002B7A86 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */; };
 		C67CE9C41C915996002B7A86 /* CAMediaTimingFunction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */; };
 		C67CE9C71C915A0C002B7A86 /* CIColorInvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C61C915A0C002B7A86 /* CIColorInvert.swift */; };
 		C67CE9C91C915A3D002B7A86 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9C81C915A3D002B7A86 /* Common.swift */; };
+<<<<<<< HEAD
 		C67CE9CB1C915B9C002B7A86 /* SwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */; };
 		C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */; };
 		C6803DCC1D2F68C800757792 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6803DCB1D2F68C800757792 /* UITextView+Extension.swift */; };
+=======
+>>>>>>> 00b101aeeb5023c2da7ca9193173976a2654e23b
 		C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */; };
 		C6894D6F1CBE1C7B006CFDCD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -40,14 +43,17 @@
 		C67CE9B21C91556D002B7A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C67CE9BD1C9157FD002B7A86 /* Sequence+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
-		C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		C67CE9BF1C915815002B7A86 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+Extension.swift"; sourceTree = "<group>"; };
 		C67CE9C61C915A0C002B7A86 /* CIColorInvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColorInvert.swift; sourceTree = "<group>"; };
 		C67CE9C81C915A3D002B7A86 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
 		C6803DCB1D2F68C800757792 /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+=======
+>>>>>>> 00b101aeeb5023c2da7ca9193173976a2654e23b
 		C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C69900B51D2E045200C15507 /* LucioExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LucioExtension-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -99,15 +105,12 @@
 			isa = PBXGroup;
 			children = (
 				C64DC1771D1A37E000CB1708 /* UIImage+Extension.swift */,
-				C67CE9CE1C915C83002B7A86 /* SwiftyTimer.swift */,
 				C64DC1791D1A38EA00CB1708 /* UIViewController+Extension.swift */,
-				C67CE9CA1C915B9C002B7A86 /* SwiftyUserDefaults.swift */,
 				C67CE9C31C915996002B7A86 /* CAMediaTimingFunction+Extension.swift */,
-				C6803DCB1D2F68C800757792 /* UITextView+Extension.swift */,
 				C67CE9B91C9156A2002B7A86 /* UIView+Extension.swift */,
 				C67CE9BD1C9157FD002B7A86 /* Sequence+Extension.swift */,
 				C6894D6C1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift */,
-				C67CE9BF1C915815002B7A86 /* NSDate+Extension.swift */,
+				C67CE9BF1C915815002B7A86 /* Date+Extension.swift */,
 				C67CE9C11C91597B002B7A86 /* UIColor+Extension.swift */,
 				C6894D6E1CBE1C7B006CFDCD /* String+Extension.swift */,
 				C69900B51D2E045200C15507 /* LucioExtension-Bridging-Header.h */,
@@ -151,7 +154,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Person;
 				TargetAttributes = {
 					C67CE9A21C91556D002B7A86 = {
@@ -195,13 +198,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C67CE9CB1C915B9C002B7A86 /* SwiftyUserDefaults.swift in Sources */,
 				C64DC1781D1A37E000CB1708 /* UIImage+Extension.swift in Sources */,
 				C67CE9C21C91597B002B7A86 /* UIColor+Extension.swift in Sources */,
 				C64DC17A1D1A38EA00CB1708 /* UIViewController+Extension.swift in Sources */,
+<<<<<<< HEAD
 				C67CE9CF1C915C83002B7A86 /* SwiftyTimer.swift in Sources */,
 				C6803DCC1D2F68C800757792 /* UITextView+Extension.swift in Sources */,
 				C67CE9C01C915815002B7A86 /* NSDate+Extension.swift in Sources */,
+=======
+				C67CE9C01C915815002B7A86 /* Date+Extension.swift in Sources */,
+>>>>>>> 00b101aeeb5023c2da7ca9193173976a2654e23b
 				C6894D6D1CBE1C14006CFDCD /* UIBarButtonItem+Extension.swift in Sources */,
 				C6894D6F1CBE1C7B006CFDCD /* String+Extension.swift in Sources */,
 				C67CE9C41C915996002B7A86 /* CAMediaTimingFunction+Extension.swift in Sources */,
@@ -249,8 +255,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -293,8 +301,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -313,6 +323,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -328,6 +339,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LucioExtension/Extensions/LucioExtension-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -341,6 +353,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Person.LucioExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LucioExtension/Extensions/LucioExtension-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

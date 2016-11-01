@@ -10,7 +10,7 @@ import Foundation
 
 public extension Equatable {
     
-    public func isIn<T: SequenceType where T.Generator.Element == Self>(collection: T) -> Bool {
+    public func isIn<T: Sequence>(collection: T) -> Bool where T.Iterator.Element == Self {
         return collection.contains(self)
     }
     public func isIn(collection: Self...) -> Bool {
@@ -18,9 +18,9 @@ public extension Equatable {
     }
 }
 
-public extension SequenceType {
-    @warn_unused_result
-    public func some(@noescape includeElement:(Self.Generator.Element) throws -> Bool) rethrows -> Bool {
+public extension Sequence {
+    
+    public func some(includeElement: (Self.Iterator.Element) throws -> Bool) rethrows -> Bool {
     
         for element in self {
             do {
@@ -32,8 +32,7 @@ public extension SequenceType {
         return false;
     }
     
-    @warn_unused_result
-    public func every(@noescape includeElement:(Self.Generator.Element) throws -> Bool) rethrows -> Bool {
+    public func every(includeElement:(Self.Iterator.Element) throws -> Bool) rethrows -> Bool {
         
         for element in self {
             do {
